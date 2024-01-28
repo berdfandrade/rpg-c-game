@@ -28,7 +28,7 @@ int main () {
     return(0);
 }
 
-// Takes a player as an argument and prints their name, heatlh and mana. Retursn nothing.
+// Takes a player as an argument and prints their name, heatlh and mana. Returns nothing.
 void DisplayStats(player Target){
     printf("\n\nName : %s | Heatlh: %d Mana: %d\n\n", Target.name, Target.health, Target.mana);
 };
