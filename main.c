@@ -1,22 +1,35 @@
 #include <stdio.h>
 #include <string.h>
-#include "character.h"
 
-void criar_novo_jogador(Jogador *player)
-{
-    strcpy(player->nome, "Nome do jogador");
+typedef struct playerStructure{
+    char name[50];
+    int health; 
+    int mana;
+} player;
 
-    player->nivel = 1;
-    player->pontos_vida = 100;
-    player->pontos_ataque = 20;
-    player->pontos_defesa = 10;
+// Function Prototype
+void DisplayStats(player Target);
+
+int main () {
+    player Hero, Villain;
+
+    // Hero 
+    strcpy(Hero.name, "Sir Maximus");
+    Hero.health = 60;
+    Hero.mana = 30;
+
+    // Villain 
+    strcpy(Villain.name, "Sir Jenkins");
+    Villain.health = 70;
+    Villain.mana = 20;
+
+    DisplayStats(Hero);
+    DisplayStats(Villain);
+    return(0);
 }
 
-int main()
-{
-    Jogador player;
+// Takes a player as an argument and prints their name, heatlh and mana. Retursn nothing.
+void DisplayStats(player Target){
+    printf("\n\nName : %s | Heatlh: %d Mana: %d\n\n", Target.name, Target.health, Target.mana);
+};
 
-    criar_novo_jogador(&player);
-    aumentarNivel(&player);
-    exibirStatus(player);
-}
