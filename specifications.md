@@ -11,7 +11,7 @@ Players shouldː
     - Have stats that tell us about their abilities.
     - Be able to interact with each other (i.e. Talking, Fighting)
     - Be able to move from one location to another.
-    - _Be able to carry items.
+    - Be able to carry items.
 
 *Stats*ː Easy. Just a variable telling us what the stat is for (like, health) and containing an integer value. 
 
